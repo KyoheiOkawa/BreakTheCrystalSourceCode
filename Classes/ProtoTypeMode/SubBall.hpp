@@ -12,6 +12,10 @@
 #include <cocos2d.h>
 #include "Ball.hpp"
 
+/**
+ *@class SubBall
+ *@brief クリスタルが破壊された時に現れるボールのクラス
+ */
 class SubBall : public Ball
 {
 private:
@@ -27,7 +31,7 @@ public:
     virtual bool init(const cocos2d::Vec2 pos,cocos2d::SpriteBatchNode* batch);
     /**
      *@brief create関数
-     *@param *batch ボールを追加させるSpriteBatchNodeのポインタ
+     *@param[in] *batch ボールを追加させるSpriteBatchNodeのポインタ
      */
     static SubBall* create(const cocos2d::Vec2 pos,cocos2d::SpriteBatchNode* batch);
     ///アップデート関数

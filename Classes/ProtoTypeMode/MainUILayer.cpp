@@ -19,12 +19,12 @@ bool MainUILayer::init()
     
     this->scheduleUpdate();
     
-    Hierarchy();
+    AddNode();
     
     return true;
 }
 
-void MainUILayer::Hierarchy()
+void MainUILayer::AddNode()
 {
     auto origin = Director::getInstance()->getVisibleOrigin();
     auto vs = Director::getInstance()->getVisibleSize();

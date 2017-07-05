@@ -18,10 +18,13 @@
 class TutorialLayer : public cocos2d::LayerColor
 {
 private:
-    ///戻るボタンが押された時に呼ばれる
-    ///タイトルレイヤーに戻る
+    /**
+     *@brief 戻るボタン（←）が押された時に呼ばれ、このレイヤーを閉じる
+     *@param[in] pSender メッセージを送ったオブジェクト
+     *@param[in] type タッチイベントのタイプ
+     */
     void onBackButton(Ref *pSender,cocos2d::ui::Widget::TouchEventType type);
-    ///ボタンが押された瞬間に呼ばれる
+    ///このレイヤーがタッチされた時に呼ばれる
     bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
 public:
     ///初期化関数

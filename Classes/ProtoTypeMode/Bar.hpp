@@ -45,7 +45,7 @@ private:
     bool onContactBegin(cocos2d::PhysicsContact &contact);
     
     /**
-     *@brief                 PhysicsBodyの初期化関数
+     *@brief                 PhysicsBodyの初期化処理をまとめる
      */
     void initPhysicsBody();
     

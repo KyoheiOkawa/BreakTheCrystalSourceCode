@@ -12,7 +12,10 @@
 #include <cocos2d.h>
 
 
-///ゲームの状態
+/**
+ *@enum GameState
+ *@brief ゲーム進行の状態
+ */
 enum GameState{
     START,      ///ゲームがスタートしていない状態
     PLAYING,    ///ゲームがスタートしている状態
@@ -37,9 +40,9 @@ private:
     cocos2d::Label* _last3Count;
     
     /**
-     @brief             ノードを追加
+     @brief             ノードを追加する
      */
-    void Hierarchy();
+    void AddNode();
     /**
      @brief             テクスチャキャッシュにテクスチャを読み込む
      */

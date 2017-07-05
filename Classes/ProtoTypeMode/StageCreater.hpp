@@ -11,7 +11,10 @@
 
 #include <cocos2d.h>
 
-///クリスタルの種類
+/**
+ *@enum CrystalType
+ *@brief クリスタルの種類
+ */
 enum CrystalType{
     NORMAL,
     TIME,
@@ -36,8 +39,11 @@ private:
     ///選択したクリスタルを保管しておく変数
     int _Selected[ROW][COL];
     /**
-     *@brief ランダムに並べるクリスタルを設定する関数
-     *@param isFirstSelect ゲーム開始時に並べる時はtrueを設定する
+     *@brief クリスタルの並び順をランダムに決定する
+     *
+     *決定された並び順は_Selected変数に保管される
+     *
+     *@param[in] isFirstSelect ゲーム開始時に並べる時はtrueを設定する
      */
     inline void SelectCrystals(bool isFirstSelect);
 public:

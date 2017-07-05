@@ -22,21 +22,21 @@ private:
     /**
      *@brief ノードを追加
      */
-    void Hierarchy();
+    void AddNode();
     /**
-     *@brief スタートボタンを押した時に呼ばれる
+     *@brief スタートボタンを押した時に呼ばれ、ゲームを開始する
      */
     void onPlayButton(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     /**
-     *@brief BPショップボタンを押した時に呼ばれる
+     *@brief BPショップボタンを押した時に呼ばれ、ショップレイヤーを表示する
      */
     void onShoppingButton(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     /**
-     *@brief ランキングボタンを押した時に呼ばれる
+     *@brief ランキングボタンを押した時に呼ばれ、ランキングを表示する
      */
     void onRankingButton(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     /**
-     *@brief HowToPlayボタンを押した時に呼ばれる
+     *@brief HowToPlayボタンを押した時に呼ばれ、ゲーム説明のページビューを表示する
      */
     void onTutorialButton(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     ///背景パーティクルを表示するレイヤー

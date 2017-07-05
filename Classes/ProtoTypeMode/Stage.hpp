@@ -13,7 +13,7 @@
 
 /**
  *@class Stage
- *@brief メインシーンで使われる壁枠のクラス
+ *@brief メインシーンで使用される壁枠のクラス
  */
 class Stage : public cocos2d::Sprite
 {

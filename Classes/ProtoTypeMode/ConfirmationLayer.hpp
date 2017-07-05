@@ -26,23 +26,31 @@ private:
     void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
     ///タッチのイベントリスナー
     cocos2d::EventListenerTouchOneByOne* _touchListener;
-    ///YESボタンが押された時に呼ばれる
+    /**
+     *@brief YESボタンが押された時に呼ばれ、購入処理を実行
+     *@param[in] pSender メッセージを送ったオブジェクト
+     *@param[in] type タッチイベントのタイプ
+     */
     void onYesButton(Ref* pSender,cocos2d::ui::Widget::TouchEventType type);
-    ///NOボタンが押された時に呼ばれる
+    /**
+     *@brief NOボタンが押された時に呼ばれ、処理をせずにこのレイヤーを閉じる
+     *@param[in] pSender メッセージを送ったオブジェクト
+     *@param[in] type タッチイベントのタイプ
+     */
     void onNoButton(Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
     ///YESボタンが押された時に実行する購入処理のラムダ式
     std::function<void()> _parchaceFunc;
 public:
     /**
      *@brief 初期化関数
-     *@param func 購入処理が書かれたラムダ式
+     *@param[in] func 購入処理が書かれたラムダ式
      *@return true 初期化成功
      *@return false 初期化失敗
      */
     bool init(std::function<void()> func);
     /**
      *@brief create関数
-     *@param func 購入処理が書かれたラムダ式
+     *@param[in] func 購入処理が書かれたラムダ式
      *@return 作成された確認レイヤー
      */
     static ConfirmationLayer* create(std::function<void()> func);

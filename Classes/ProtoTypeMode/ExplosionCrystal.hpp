@@ -15,7 +15,7 @@
 class ExplosionCrystal : public Crystal
 {
 private:
-    ///起爆していたらtrue
+    ///起爆していたらtrue(複数の爆発クリスタルがある場合に必要な確認)
     bool isExplode;
 public:
     ///初期化関数
@@ -27,8 +27,9 @@ public:
     ///壊された時の処理　軽負荷
     void DestroyFuncForExplosion() override;
     /**
-     *@brief 起爆されているか(複数の爆発クリスタルがある場合に必要な確認)
+     *@brief この爆発クリスタルが起爆しているか
      *@return true 起爆されていた場合
+     *@return false 起爆されていない場合
      */
     bool GetIsExplode(){
         return isExplode;

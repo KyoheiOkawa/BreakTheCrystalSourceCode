@@ -30,12 +30,12 @@ bool TitleScene::init()
         return false;
     
     criadx2le::loadAcbFile("adx/ProtoType.acb","adx/ProtoType.awb");
-    Hierarchy();
+    AddNode();
     
     return true;
 }
 
-void TitleScene::Hierarchy()
+void TitleScene::AddNode()
 {
     auto origin = Director::getInstance()->getVisibleOrigin();
     auto vs = Director::getInstance()->getVisibleSize();
@@ -123,9 +123,9 @@ void TitleScene::Hierarchy()
     rankChara->setPosition(origin+Vec2(vs.width-20,rankingButton->getContentSize().height*rankingButton->getScaleX()+15));
     this->addChild(rankChara);
     
-    NendModule::release("MySpotID");
-    char apikey[] = "MyAPIKey";
-    char spotID[] = "MySpotID";
+    NendModule::release("MySpotId");
+    char apikey[] = "MyApiKey";
+    char spotID[] = "MySpotId";
     NendModule::createNADViewTop(apikey, spotID,true);
     
 }

@@ -4,13 +4,15 @@
 //
 //  Created by 大川恭平 on 2017/02/08.
 //
-//シングルトンクラス
-//プロトタイプモードのゲームマネージャー
 #ifndef PrototypeModeManager_hpp
 #define PrototypeModeManager_hpp
 
 #include <cocos2d.h>
 
+/**
+ *@class PrototypeModeManager
+ *@brief　シングルトンクラスのゲームマネージャー
+ */
 class PrototypeModeManager
 {
 private:
@@ -27,7 +29,7 @@ public:
     static PrototypeModeManager* getInstance();
     /**
      *@brief 配列コピー関数
-     *@param array[] コピーしたい配列のポインタ
+     *@param[in] array[] コピーしたい配列のポインタ
      *@return コピー後の配列のポインタ
      */
     static int* CopyArray(const int array[]);

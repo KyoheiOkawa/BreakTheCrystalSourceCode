@@ -39,34 +39,34 @@ private:
     /**
      *@brief ノードを追加
      */
-    void Hierarchy();
+    void AddNode();
     /**
      *@brief            アップデート関数
-     *@param delta　１フレームにかかる時間
+     *@param[in] delta　１フレームにかかる時間
      */
     void update(float delta) override;
     /**
      *@brief            ポーズボタンを押した時に呼ばれる関数
-     *@param *pSender   イベントメッセージを送ったオブジェクトの情報
-     *@param type       タッチイベントのタイプ
+     *@param[in] *pSender   イベントメッセージを送ったオブジェクトの情報
+     *@param[in] type       タッチイベントのタイプ
      */
     void onPauseButton(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     /**
      *@brief            ポーズメニューの再開ボタンを押した時に呼ばれる関数
-     *@param *pSender   イベントメッセージを送ったオブジェクトの情報
-     *@param type       タッチイベントのタイプ
+     *@param[in] *pSender   イベントメッセージを送ったオブジェクトの情報
+     *@param[in] type       タッチイベントのタイプ
      */
     void onResumeButton(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     /**
      *@brief            ポーズメニューのリトライボタンを押した時に呼ばれる関数
-     *@param *pSender   イベントメッセージを送ったオブジェクトの情報
-     *@param type       タッチイベントのタイプ
+     *@param[in] *pSender   イベントメッセージを送ったオブジェクトの情報
+     *@param[in] type       タッチイベントのタイプ
      */
     void onRetryButton(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     /**
      *@brief            ポーズメニューのリターンボタンを押した時に呼ばれる関数
-     *@param *pSender   イベントメッセージを送ったオブジェクトの情報
-     *@param type       タッチイベントのタイプ
+     *@param[in] *pSender   イベントメッセージを送ったオブジェクトの情報
+     *@param[in] type       タッチイベントのタイプ
      */
     void onReturnButton(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
 public:

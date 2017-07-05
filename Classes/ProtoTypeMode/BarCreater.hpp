@@ -47,21 +47,21 @@ private:
      */
     void setGuideBar(cocos2d::Touch* touch);
     /**
-     *@brief                 バーを生成
+     *@brief                 タッチ情報を元にバーを生成する
      *@param[in]  touch      タッチ情報
      */
     void createBar(cocos2d::Touch* touch);
     
     /**
      *@brief                 バーが壁の中に収まるように座標を補正する関数
-     *@param[in]  pos        補正する座標(Vec2)
+     *@param[out]  pos        補正する座標(Vec2)
      */
     void limitBarCreateArea(cocos2d::Vec2& pos);
     /**
      *@brief                 生成するバーの長さ、位置、角度を求める関数
-     *@param[in]  &length    長さの計算結果を格納する変数
-     *@param[in]  &pos       位置の計算結果を格納する変数
-     *@param[in]  &rotation  角度の計算結果を格納する変数
+     *@param[out]  &length    長さの計算結果を格納する変数
+     *@param[out]  &pos       位置の計算結果を格納する変数
+     *@param[out]  &rotation  角度の計算結果を格納する変数
      *@param[in]  *touch     指が話された時のタッチ情報
      */
     void calBarLenPosRot(float& length,cocos2d::Vec2& pos, float& rotation,cocos2d::Touch* touch);

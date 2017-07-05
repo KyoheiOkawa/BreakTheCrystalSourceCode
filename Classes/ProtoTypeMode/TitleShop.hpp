@@ -46,10 +46,13 @@ public:
     bool init();
     
     CREATE_FUNC(TitleShop);
-    
+    /**
+     *@brief 残金ラベルの表示を更新する
+     *
+     *スキンを購入、レベルアップした時に残金が減った後に呼び出す
+     *
+     */
     void setMoneyLabel();
-    
-
 };
 
 #endif /* TitleShop_hpp */

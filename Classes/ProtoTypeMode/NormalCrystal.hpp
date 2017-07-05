@@ -16,8 +16,6 @@
  *@class NormalCrystal
  *@brief ノーマルクリスタルクラス
  */
-//Crystalクラスを継承すれば面倒臭い衝突処理書かなくて良い
-//DestroyFuncにボールと当たったときまたは壊れる時の処理を記述する
 class NormalCrystal : public Crystal
 {
 public:

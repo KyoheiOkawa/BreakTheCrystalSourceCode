@@ -6,13 +6,10 @@
 //
 //
 //プロトタイプモードで共通の値をここに保管する
-//また、頻繁に調整する値（ゲームの難易度に関わるようなもの）も
-//ここで宣言してファイルを行ったり来たりするなどの無駄な労力にならないようにする
 #ifndef Common_h
 #define Common_h
 
 //インクルードファイル
-//---------------------------------
 #include "Ball.hpp"
 #include "Bar.hpp"
 #include "BarCreater.hpp"
@@ -41,9 +38,11 @@
 
 #include "AtomUtil.h"
 #include "NendModule.h"
-//---------------------------------
 
-//タグ
+/**
+ *@enum Tag
+ *@brief ノードに設定するタグ
+ */
 enum class Tag{
     PLAYER,
     WALL,

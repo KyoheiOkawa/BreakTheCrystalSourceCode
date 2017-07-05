@@ -186,8 +186,8 @@ bool ResultScene::init()
     
     //-----------------------------------------------
     //インタースティンシャル広告読み込み
-    char interstitialApiKey[] = "MyAPIKey";
-    char interstitialSpotID[] = "MySpotID";
+    char interstitialApiKey[] = "MyApiKey";
+    char interstitialSpotID[] = "MySpotId";
     NendInterstitialModule::createNADInterstitial(interstitialApiKey, interstitialSpotID);
     //-----------------------------------------------
     

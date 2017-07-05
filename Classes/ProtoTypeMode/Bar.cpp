@@ -14,7 +14,8 @@ bool Bar::init(const float length,const cocos2d::Vec2 pos,const float rotation)
 {
     auto manager = PrototypeModeManager::getInstance();
     
-    Texture2D* barTexture = Director::getInstance()->getTextureCache()->getTextureForKey(manager->_barTexturePath.at(manager->_selectedBar));
+    auto textureCache = Director::getInstance()->getTextureCache();
+    Texture2D* barTexture = textureCache->getTextureForKey(manager->_barTexturePath.at(manager->_selectedBar));
     
     if(!Sprite::initWithTexture(barTexture))
         return false;

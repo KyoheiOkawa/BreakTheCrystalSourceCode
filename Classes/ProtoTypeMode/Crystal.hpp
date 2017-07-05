@@ -14,7 +14,7 @@
 
 /**
  *@class Crystal
- *@brief クリスタルの基底クラス
+ *@brief クリスタルの基底抽象クラス
  */
 class Crystal : public cocos2d::Sprite
 {
@@ -23,7 +23,7 @@ protected:
     MainScene* _parent;
     /**
      *@brief パーティクルを発生させる
-     *@param filePath 発生させるパーティクルの.plistのパス
+     *@param[in] filePath 発生させるパーティクルの.plistのパス
      */
     void setParticle(std::string filePath);
     /**
@@ -33,7 +33,7 @@ protected:
 public:
     /**
      *@brief 初期化関数
-     *@param batch クリスタルを追加するパーティクルバッチノード
+     *@param[in] batch クリスタルを追加するパーティクルバッチノード
      *@return true 初期化成功時
      */
     virtual bool init(cocos2d::SpriteBatchNode* batch);
@@ -45,7 +45,9 @@ public:
     virtual void DestroyFunc() = 0;
     /**
      *@brief 爆発に巻き込まれた時に使用するDestroyFunc
-     *       処理に負荷がかからないようにする関数
+     *
+     *処理の負荷を減らすためパーティクルを発生しない、音を鳴らさずにクリスタルを破壊する関数
+     *
      */
     virtual void DestroyFuncForExplosion() = 0;
 };

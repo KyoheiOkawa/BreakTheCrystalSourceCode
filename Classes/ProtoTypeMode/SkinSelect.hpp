@@ -24,24 +24,28 @@ private:
     void onChangedRadioButtonSelectBar(Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
     /**
      *@brief ボールがアンロックされているか確認する
-     *@param ballId アンロックされているか確認したいボールのID
+     *@param[in] ballId アンロックされているか確認したいボールのID
      *@return true アンロックされている時
      *@return false ロックされている時
      */
     bool isUnlockedBall(int ballId);
     /**
      *@brief バーがアンロックされているか確認する
-     *@param barId アンロックされているか確認したいバーのID
+     *@param[in] barId アンロックされているか確認したいバーのID
      *@return true アンロックされている時
      *@return false ロックされている時
      */
     bool isUnlockedBar(int barId);
-    ///BP不足で買えないボールのボタンを押せなくする
+    /**
+     *@brief BP不足で買えないボールのボタンを押せなくする
+     */
     void setRadioButtonTouchEnableBall();
-    ///BP不足で買えないバーのボタンを押せなくする
+    /**
+     *@brief BP不足で買えないバーのボタンを押せなくする
+     */
     void setRadioButtonTouchEnableBar();
     
-    ///ボールのラジオボタングルーぷ
+    ///ボールのラジオボタングループ
     cocos2d::ui::RadioButtonGroup* _radioButtonGroupBall;
     ///バーのラジオボタングループ
     cocos2d::ui::RadioButtonGroup* _radioButtonGroupBar;

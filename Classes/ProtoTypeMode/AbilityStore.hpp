@@ -14,7 +14,7 @@
 
 /**
  *@class AbilityStore
- *@brief レベルアップする
+ *@brief レベルアップするショップのレイヤー
  */
 class AbilityStore : public cocos2d::Layer
 {
@@ -24,13 +24,15 @@ private:
     ///アビリティのレベルを上げるボタン
     cocos2d::ui::Button* _abilityBt[4];
     /**
-     *@brief レベルのラベルのテキストを設定する
-     *@param index _level[index]
+     *@brief レベルのラベルのテキストを更新する
+     *@param[in] index 更新したい_level変数のid(_level[index])
      */
     void setLevelLabelString(int index);
     /**
-     *@brief レベルボタンを押せるものは押せるように
-     *       押せないものは押せないように設定する
+     *@brief レベルボタンを押せるものは押せるように、押せないものは押せないように設定する
+     *
+     *レベルマックス、残金不足の時に押せなくなる
+     *
      */
     void setLevelBtTouchEnable();
     ///レベルアップボタンが押された時に呼ばれる

@@ -44,7 +44,7 @@ bool MainScene::init()
     _BallBatch = SpriteBatchNode::create(manager->_ballTexturePath.at(manager->_selectedBall));
     this->addChild(_BallBatch);
     
-    Hierarchy();
+    AddNode();
     
     auto touchListener = EventListenerTouchOneByOne::create();
     touchListener->onTouchBegan = CC_CALLBACK_2(MainScene::onTouchBegan, this);
@@ -108,8 +108,7 @@ void MainScene::LoadTextureCache()
     textureCache->addImage("particle/Break2.png");
 }
 
-//Unityでいうヒエラルキー
-void MainScene::Hierarchy()
+void MainScene::AddNode()
 {
     auto manager = PrototypeModeManager::getInstance();
     
